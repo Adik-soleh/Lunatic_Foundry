@@ -1,0 +1,68 @@
+import { Service } from '@/types';
+
+export const services: Service[] = [
+  {
+    slug: 'ui-ux-design',
+    title: 'UI/UX Design',
+    description: 'Desain antarmuka yang intuitif, indah, dan berfokus pada pengalaman pengguna terbaik. Kami menggabungkan riset mendalam dengan kreativitas untuk menciptakan produk digital yang disukai pengguna.',
+    icon: 'Palette',
+    color: 'pastel-pink',
+    features: [
+      'User Research & Persona',
+      'Wireframing & Prototyping',
+      'Visual Design System',
+      'Usability Testing',
+      'Interaction Design',
+      'Design Handoff',
+    ],
+    tools: ['Figma', 'Adobe XD', 'Sketch', 'Principle', 'Maze'],
+  },
+  {
+    slug: 'mobile-development',
+    title: 'Mobile Development',
+    description: 'Pengembangan aplikasi mobile cross-platform dan native untuk Android & iOS. Performa tinggi, UI responsif, dan pengalaman pengguna yang mulus di setiap perangkat.',
+    icon: 'Smartphone',
+    color: 'pastel-blue',
+    features: [
+      'React Native / Flutter',
+      'Native iOS (Swift)',
+      'Native Android (Kotlin)',
+      'Push Notification',
+      'Offline-first Architecture',
+      'App Store Optimization',
+    ],
+    tools: ['React Native', 'Flutter', 'Swift', 'Kotlin', 'Firebase'],
+  },
+  {
+    slug: 'web-development',
+    title: 'Web Development',
+    description: 'Pengembangan website dan web application modern dengan teknologi terkini. Dari landing page hingga enterprise platform, kami membangun solusi yang skalabel dan cepat.',
+    icon: 'Globe',
+    color: 'pastel-green',
+    features: [
+      'Next.js / React',
+      'Full-stack Development',
+      'Progressive Web App',
+      'E-commerce Solutions',
+      'API Development',
+      'Cloud Deployment',
+    ],
+    tools: ['Next.js', 'React', 'Node.js', 'PostgreSQL', 'AWS'],
+  },
+  {
+    slug: 'digital-consulting',
+    title: 'Digital Consulting',
+    description: 'Konsultasi strategi digital untuk transformasi bisnis Anda. Kami membantu merancang roadmap teknologi, optimasi proses, dan memaksimalkan ROI dari investasi digital.',
+    icon: 'Lightbulb',
+    color: 'pastel-yellow',
+    features: [
+      'Digital Strategy',
+      'Technology Audit',
+      'Process Optimization',
+      'Data Analytics Setup',
+      'Team Training',
+      'Growth Hacking',
+    ],
+    tools: ['Google Analytics', 'Mixpanel', 'Jira', 'Notion', 'Miro'],
+  },
+];
