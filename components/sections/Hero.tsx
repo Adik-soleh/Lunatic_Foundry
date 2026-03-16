@@ -5,12 +5,12 @@ import { ArrowRight, Star } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center px-6 md:px-16 pt-24 pb-16 bg-[#E1F16B] relative overflow-hidden">
+    <section className="min-h-screen flex items-center px-6 md:px-16 pt-24 pb-16 bg-[#d2e823] relative overflow-hidden">
 
       <div className="absolute -top-20 -left-20 w-96 h-96 bg-white/30 rounded-full blur-[120px]" />
 
       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center w-full">
-
+    
         <motion.div
           initial={{ opacity: 0, x: -40 }}
           animate={{ opacity: 1, x: 0 }}
