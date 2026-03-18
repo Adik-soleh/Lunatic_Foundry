@@ -57,7 +57,7 @@ export default function Hero({
 
   return (
     <section
-      className={`min-h-screen flex items-center px-6 md:px-16 pt-24 pb-16 relative overflow-hidden ${
+      className={`min-h-screen flex items-center px-4 sm:px-6 md:px-16 pt-24 pb-16 relative overflow-hidden ${
         isVideoBackground ? 'bg-[#10231e]' : 'bg-[#d2e823]'
       }`}
     >
@@ -92,7 +92,7 @@ export default function Hero({
           className={`relative z-10 ${isVideoBackground ? 'max-w-4xl' : ''}`}
         >
           <div
-            className={`inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-bold mb-6 ${
+            className={`inline-flex max-w-full items-center gap-2 px-3 sm:px-4 py-2 rounded-full text-xs sm:text-sm font-bold mb-6 ${
               isVideoBackground ? 'bg-white/15 text-white backdrop-blur-sm' : 'bg-[#1E3932]/10 text-[#1E3932]'
             }`}
           >
@@ -107,9 +107,9 @@ export default function Hero({
               isVideoBackground ? 'text-white' : 'text-[#1E3932]'
             }`}
           >
-            <span className="whitespace-nowrap">We build websites</span> <br />
-            <span className={`inline-block ${isVideoBackground ? 'text-[#d7fca4]' : 'text-white'}`}>
-              <span aria-live="polite">{typedText}</span>
+            <span className="sm:whitespace-nowrap">We build websites</span> <br />
+            <span className={`inline-block min-h-[1.1em] ${isVideoBackground ? 'text-[#d7fca4]' : 'text-white'}`}>
+              <span aria-live="polite">{typedText || '\u00A0'}</span>
               <span
                 className={`inline-block w-[0.08em] h-[0.9em] ml-1 align-[-0.08em] animate-pulse ${
                   isVideoBackground ? 'bg-[#d7fca4]' : 'bg-white'
@@ -127,13 +127,13 @@ export default function Hero({
             Your website, reimagined. Built for speed, designed for impact, engineered to grow with you.
           </p>
 
-          <div className="flex items-center gap-3 w-full max-w-md">
+          <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 w-full max-w-md">
             <input
               type="text"
               placeholder="yourname@gmail.com"
               className="flex-1 px-6 py-4 rounded-2xl bg-white shadow-sm focus:shadow-md transition-all outline-none text-[#1E3932] font-semibold"
             />
-            <button className="shrink-0 bg-[#1E3932] text-white px-8 py-4 rounded-2xl font-bold hover:bg-[#2d544a] hover:-translate-y-0.5 transition-all active:scale-95 shadow-lg shadow-[#1E3932]/20">
+            <button className="w-full sm:w-auto shrink-0 bg-[#1E3932] text-white px-8 py-4 rounded-2xl font-bold whitespace-nowrap hover:bg-[#2d544a] hover:-translate-y-0.5 transition-all active:scale-95 shadow-lg shadow-[#1E3932]/20">
               Join Now
             </button>
           </div>

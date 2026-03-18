@@ -15,12 +15,12 @@ export default function LogoWall() {
   const items = [...techStack, ...techStack];
 
   return (
-    <section className="py-20 bg-[#F9F9F9] overflow-hidden">
+    <section className="py-20 bg-[#F2F4EF] overflow-hidden">
       <div className="text-center mb-12 px-4">
-        <h2 className="text-3xl md:text-5xl font-black text-[#1A1A1A] tracking-tight">
+        <h2 className="text-3xl md:text-5xl font-black text-[#17201E] tracking-tight">
           Built with the right tools.
         </h2>
-        <p className="mt-3 text-[#1A1A1A]/60 text-base md:text-lg font-medium">
+        <p className="mt-3 text-[#4F5B57] text-base md:text-lg font-medium">
           Teknologi yang kami gunakan — proven, modern, dan production-ready.
         </p>
       </div>
@@ -30,7 +30,7 @@ export default function LogoWall() {
           {items.map((tech, i) => (
             <div
               key={i}
-              className="flex-shrink-0 flex flex-col items-center gap-2 px-6 py-4 bg-white rounded-2xl shadow-sm border border-gray-100 min-w-[108px]"
+              className="flex-shrink-0 flex flex-col items-center gap-2 px-6 py-4 bg-[#FBFCF8] rounded-2xl shadow-sm border border-[#E4E8DD] min-w-[108px]"
             >
               <img
                 src={`https://cdn.simpleicons.org/${tech.slug}/${tech.color.replace('#', '')}`}
@@ -39,7 +39,7 @@ export default function LogoWall() {
                 height={32}
                 className="w-8 h-8"
               />
-              <span className="text-sm font-semibold text-[#1A1A1A] whitespace-nowrap">
+              <span className="text-sm font-semibold text-[#17201E] whitespace-nowrap">
                 {tech.name}
               </span>
             </div>

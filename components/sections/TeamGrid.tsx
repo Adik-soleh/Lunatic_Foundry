@@ -23,6 +23,7 @@ export default function TeamGrid() {
                 src={member.image || "/team/avatar.png"}
                 alt={member.name.charAt(0)}
                 fill
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 className="object-cover"
               />
             </div>
