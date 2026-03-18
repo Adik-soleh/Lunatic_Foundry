@@ -35,11 +35,67 @@ export default function AboutPage() {
       </section>
 
       <section className="px-6 md:px-16 mb-40">
-        <div className="max-w-4xl">
-          <span className="text-sm sm:text-base font-extrabold uppercase tracking-[0.18em] text-[#4B5563] mb-8 block">Visi Kami</span>
-          <h2 className="text-4xl md:text-6xl font-black text-[#1E3932] leading-tight tracking-tighter">
-            Menjadi partner teknologi terpercaya yang membantu bisnis Indonesia berkembang di era digital melalui solusi kreatif, inovatif, dan skalabel.
-          </h2>
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-14 lg:gap-20 items-center">
+          <div className="space-y-14">
+            <div>
+              <span className="text-sm sm:text-base font-extrabold uppercase tracking-[0.18em] text-[#4B5563] mb-6 block">Visi Kami</span>
+              <h2 className="text-4xl md:text-6xl font-black text-[#1E3932] leading-[1.02] tracking-tighter max-w-4xl">
+                Membangun kehadiran digital yang terasa jernih, kuat, dan layak dipercaya sejak pandangan pertama.
+              </h2>
+              <p className="mt-6 text-[#1E3932]/72 text-lg md:text-xl font-medium leading-relaxed max-w-3xl">
+                Kami percaya website dan produk digital bukan sekadar pelengkap bisnis. Ia adalah wajah, sistem,
+                dan pengalaman yang menentukan bagaimana sebuah brand dinilai hari ini dan dipilih esok hari.
+              </p>
+            </div>
+
+            <div className="border-t border-[#1E3932]/10 pt-10">
+              <span className="text-sm sm:text-base font-extrabold uppercase tracking-[0.18em] text-[#4B5563] mb-6 block">Misi Kami</span>
+              <h3 className="text-2xl md:text-4xl font-black text-[#1E3932] leading-tight tracking-tighter max-w-3xl">
+                Merancang solusi digital yang sederhana untuk digunakan, presisi untuk dijalankan, dan siap bertumbuh bersama bisnis Anda.
+              </h3>
+              <p className="mt-5 text-[#1E3932]/72 text-base md:text-lg leading-relaxed font-medium max-w-3xl">
+                Dari strategi, desain, hingga pengembangan, setiap keputusan kami dibuat untuk menghadirkan hasil yang nyata:
+                performa yang cepat, pesan yang jelas, dan pengalaman yang terasa matang di setiap titik interaksi.
+              </p>
+            </div>
+          </div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="relative"
+          >
+            <div className="absolute -left-6 top-10 w-40 h-40 rounded-full bg-[#C6E23B]/20 blur-3xl" />
+            <div className="relative rounded-[40px] bg-white border border-[#1E3932]/10 shadow-[0_24px_60px_rgba(17,24,39,0.08)] overflow-hidden">
+              <div className="aspect-[4/5] bg-[linear-gradient(160deg,#f8faf7_0%,#eef3e6_46%,#e7eddd_100%)] p-8 md:p-10 flex flex-col justify-between">
+                <div className="flex items-center gap-2">
+                  <span className="w-3 h-3 rounded-full bg-[#1E3932]" />
+                  <span className="w-3 h-3 rounded-full bg-[#C6E23B]" />
+                  <span className="w-3 h-3 rounded-full bg-[#E9C3E6]" />
+                </div>
+
+                <div className="rounded-[32px] border border-dashed border-[#1E3932]/18 bg-white/70 min-h-[55%] flex items-center justify-center text-center px-8">
+                  <div>
+                    <p className="text-xs font-extrabold uppercase tracking-[0.22em] text-[#4B5563] mb-3">Placeholder Visual</p>
+                    <p className="text-2xl md:text-3xl font-black text-[#1E3932] leading-tight tracking-tight">
+                      Area untuk image brand,
+                      <br />
+                      workspace, atau editorial photo.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-end justify-between gap-6 text-[#1E3932]">
+                  <p className="text-sm md:text-base font-semibold leading-relaxed max-w-xs text-[#1E3932]/70">
+                    Gunakan visual yang terasa tenang, premium, dan mencerminkan cara kerja studio Anda.
+                  </p>
+                  <span className="text-5xl font-black tracking-tighter">LF</span>
+                </div>
+              </div>
+            </div>
+          </motion.div>
         </div>
       </section>
 
