@@ -31,11 +31,6 @@ export default function Footer() {
       </div>
 
       <div className="max-w-7xl mx-auto relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-6xl font-black text-white mb-8 tracking-tighter">
-            Jumpstart your digital <br /> future today
-          </h2>
-        </div>
 
         <div className="bg-white rounded-[48px] p-10 md:p-16 shadow-2xl">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-12 mb-16">

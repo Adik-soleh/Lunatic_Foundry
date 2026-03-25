@@ -137,6 +137,23 @@ export default function Hero({
               Join Now
             </button>
           </div>
+
+          {/* Metrics Bar */}
+          <div className={`flex items-center gap-0 mt-8 divide-x ${isVideoBackground ? 'divide-white/20' : 'divide-[#1E3932]/20'}`}>
+            {[
+              { value: '12+', label: 'Projects' },
+              { value: '3', label: 'Industries' },
+              { value: '100%', label: 'On-Time' },
+            ].map(({ value, label }) => (
+              <div key={label} className="flex flex-col items-center px-6 first:pl-0">
+                <span className={`text-2xl md:text-3xl font-black tracking-tight ${isVideoBackground ? 'text-[#d7fca4]' : 'text-[#1E3932]'}`}>
+                  {value}
+                </span>
+                <span className={`text-xs font-bold uppercase tracking-widest mt-0.5 ${isVideoBackground ? 'text-white/50' : 'text-[#1E3932]/50'}`}>
+                  {label}
+                </span>
+              </div>
+            ))}</div>
         </motion.div>
 
         {!isVideoBackground && (

@@ -33,11 +33,12 @@ export default function FeaturedWorks() {
               return (
                 <motion.div
                   key={item.slug}
-                  whileHover={{ y: -8 }}
+                  whileHover={{ y: -10, scale: 1.02 }}
+                  transition={{ type: 'spring', stiffness: 300, damping: 20 }}
                   className="flex-1"
                 >
                   <Link href={`/portfolio/${item.slug}`} className="block h-full">
-                    <div className={`${style.bg} ${style.glow} rounded-[40px] p-8 md:p-10 h-full flex flex-col justify-between transition-all duration-500 group relative overflow-hidden`}>
+                    <div className={`${style.bg} ${style.glow} rounded-[40px] p-8 md:p-10 h-full flex flex-col justify-between transition-shadow duration-500 group relative overflow-hidden`}>
                       <div className="relative z-10">
                         <span className="text-[10px] font-black uppercase tracking-widest opacity-40 mb-4 block">Featured Project</span>
                         <h3 className={`text-2xl md:text-3xl font-black mb-4 tracking-tight ${style.text}`}>
@@ -59,11 +60,12 @@ export default function FeaturedWorks() {
             return (
               <motion.div
                 key={item.slug}
-                whileHover={{ y: -8 }}
+                whileHover={{ y: -12, scale: 1.015 }}
+                transition={{ type: 'spring', stiffness: 280, damping: 22 }}
                 className="h-full"
               >
                 <Link href={`/portfolio/${item.slug}`} className="block h-full">
-                  <div className={`${style.bg} ${style.glow} rounded-[48px] p-10 md:p-12 h-full flex flex-col min-h-[500px] md:min-h-full transition-all duration-500 group relative overflow-hidden`}>
+                  <div className={`${style.bg} ${style.glow} rounded-[48px] p-10 md:p-12 h-full flex flex-col min-h-[500px] md:min-h-full transition-shadow duration-500 group relative overflow-hidden`}>
 
                     <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/2" />
 
@@ -91,12 +93,15 @@ export default function FeaturedWorks() {
           })}
         </div>
 
-        <div className="mt-16 text-center">
+        <div className="mt-16 flex justify-center">
           <Link
             href="/portfolio"
-            className="text-[#1E3932] font-black border-b-4 border-[#C6E23B] hover:text-[#C6E23B] transition-colors text-xl tracking-tight"
+            className="group inline-flex items-center gap-3 bg-[#0F172A] text-white px-8 py-4 rounded-2xl font-bold text-base tracking-tight hover:-translate-y-1 hover:shadow-xl hover:shadow-[#0F172A]/20 transition-all duration-300 active:scale-95"
           >
             Lihat Semua Portfolio
+            <span className="inline-flex items-center justify-center w-7 h-7 rounded-full bg-white/15 group-hover:bg-[#C6E23B] group-hover:text-[#0F172A] transition-all duration-300">
+              →
+            </span>
           </Link>
         </div>
       </div>
