@@ -32,12 +32,31 @@ html {
   background: #94a3b8;
 }
 
-@keyframes marquee {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+/* ─── Seamless Infinite Marquee (4-copy single-track) ────────────────────────
+   Satu flex-row berisi 4 salinan identik tech list.
+   Keyframe: translateX(0) → translateX(-25%)  = persis satu set geser keluar.
+   Karena copy ke-2 identik dengan copy ke-1, visual tidak berubah = zero glitch.
+   GPU-accelerated via will-change: transform.
+   ─────────────────────────────────────────────────────────────────────────── */
+
+.marquee-viewport {
+  overflow: hidden;
+  width: 100%;
 }
-.animate-marquee {
-  animation: marquee 25s linear infinite;
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 1rem;          /* 16px — sama dengan gap-4 tailwind */
+  padding: 1rem 0;
+  width: max-content;
+  will-change: transform;
+  animation: marquee-scroll 40s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-25%); }
 }
 
 .bouncy {
