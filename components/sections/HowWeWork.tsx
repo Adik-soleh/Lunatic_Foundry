@@ -6,148 +6,144 @@ import { motion } from 'framer-motion';
 const steps = [
   {
     number: '01',
-    title: 'Discovery',
+    phase: 'Discovery',
     headline: 'We listen before we build.',
-    description:
-      'Deep dive into your goals, users, and constraints. We map the problem space so every design decision has a reason — not just an opinion.',
+    body: 'Deep dive into your goals, users, and constraints. Every design decision earns its place — no opinions, only evidence.',
     tags: ['Kickoff Call', 'User Research', 'Scope Definition'],
-    accent: '#C6E23B',
-    accentText: '#1E3932',
+    bg: '#F8F9F4',
+    border: '#E4E8DD',
+    text: '#080E0C',
+    sub: '#6B7471',
+    numColor: '#1E3932',
+    tagBg: '#E4E8DD',
+    tagText: '#1E3932',
   },
   {
     number: '02',
-    title: 'Build',
+    phase: 'Build',
     headline: 'Design and code, in lockstep.',
-    description:
-      'No handoff lag. Design and engineering move together — fast iterations, live previews, and weekly check-ins so you always know where we are.',
+    body: 'No handoff lag. Design and engineering move together — fast iterations, live previews, weekly check-ins. You always know where we are.',
     tags: ['UI/UX Design', 'Development', 'Weekly Reviews'],
-    accent: '#1E3932',
-    accentText: '#ffffff',
+    bg: '#1E3932',
+    border: 'transparent',
+    text: '#FAFAF8',
+    sub: 'rgba(250,250,248,0.58)',
+    numColor: '#C6E23B',
+    tagBg: 'rgba(198,226,59,0.15)',
+    tagText: '#C6E23B',
   },
   {
     number: '03',
-    title: 'Launch',
+    phase: 'Launch',
     headline: 'Ship fast. Then make it better.',
-    description:
-      'We deploy with confidence: staging environment, QA checklist, and performance audits. Post-launch, we stay on-call for 30 days.',
+    body: 'Staging, QA checklist, performance audits. We deploy with confidence — and stay on-call for 30 days post-launch.',
     tags: ['QA Testing', 'Deployment', '30-Day Support'],
-    accent: '#0F172A',
-    accentText: '#C6E23B',
+    bg: '#080E0C',
+    border: 'transparent',
+    text: '#FAFAF8',
+    sub: 'rgba(250,250,248,0.5)',
+    numColor: '#C6E23B',
+    tagBg: 'rgba(198,226,59,0.1)',
+    tagText: '#C6E23B',
   },
 ];
 
-const containerVariants = {
-  hidden: {},
-  visible: { transition: { staggerChildren: 0.15 } },
-};
-
+const containerVariants = { hidden: {}, visible: { transition: { staggerChildren: 0.12 } } };
 const cardVariants = {
-  hidden: { opacity: 0, y: 32 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
+  hidden:   { opacity: 0, y: 28 },
+  visible:  { opacity: 1, y: 0, transition: { duration: 0.55, ease: [0.22, 1, 0.36, 1] } },
 };
 
 export default function HowWeWork() {
   return (
-    <section
-      id="process"
-      className="py-24 md:py-32 px-4 sm:px-6 bg-[#F8F9F4] scroll-mt-24 overflow-hidden"
-    >
+    <section id="process" className="py-24 md:py-32 px-6 bg-white scroll-mt-24 overflow-hidden">
       <div className="max-w-6xl mx-auto">
-        {/* Header */}
+
+        {/* ── Header ── */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.5 }}
-          className="mb-16 md:mb-20"
+          className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-14"
         >
-          <span className="inline-block text-xs font-black uppercase tracking-[0.2em] text-[#1E3932]/40 mb-4">
-            Our Process
-          </span>
-          <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
-            <h2 className="text-4xl sm:text-5xl md:text-6xl font-black text-[#0F172A] tracking-tighter leading-[1] max-w-lg">
-              How We<br />
-              <span className="italic text-[#1E3932]">Actually</span> Work.
+          <div>
+            <span className="inline-block text-xs font-body font-bold uppercase tracking-[0.2em] text-[#6B7471] mb-4">
+              Our Process
+            </span>
+            <h2 className="font-heading text-4xl sm:text-5xl font-extrabold text-[#080E0C] tracking-tighter leading-[1]">
+              How We <em className="not-italic text-[#1E3932]">Actually</em> Work.
             </h2>
-            <p className="text-[#4F5B57] text-base md:text-lg max-w-xs leading-relaxed font-medium">
-              Three phases. Zero ambiguity. You always know what&apos;s happening and why.
-            </p>
           </div>
+          <p className="font-body text-[#6B7471] text-base md:text-lg max-w-xs leading-relaxed">
+            Three phases. Zero ambiguity. You always know what&apos;s happening and why.
+          </p>
         </motion.div>
 
-        {/* Steps Grid */}
+        {/* ── Step Cards ── */}
         <motion.div
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
-          viewport={{ once: true, margin: '-80px' }}
-          className="grid grid-cols-1 md:grid-cols-3 gap-5"
+          viewport={{ once: true, margin: '-60px' }}
+          className="grid grid-cols-1 md:grid-cols-3 gap-4"
         >
           {steps.map((step) => (
             <motion.div
               key={step.number}
               variants={cardVariants}
-              whileHover={{ y: -6, transition: { type: 'spring', stiffness: 300, damping: 22 } }}
-              className="group relative rounded-[32px] p-8 md:p-10 flex flex-col gap-6 cursor-default"
-              style={{ backgroundColor: step.accent }}
+              whileHover={{ y: -6, transition: { type: 'spring', stiffness: 280, damping: 22 } }}
+              className="group relative rounded-card3 p-8 md:p-10 flex flex-col gap-5 overflow-hidden cursor-default"
+              style={{ backgroundColor: step.bg, border: `1px solid ${step.border}` }}
             >
-              {/* Step number — large watermark */}
+              {/* Watermark number */}
               <span
-                className="absolute top-6 right-8 text-[80px] font-black leading-none select-none pointer-events-none"
-                style={{ color: step.accentText, opacity: 0.08 }}
+                className="absolute -bottom-4 -right-2 font-heading text-[120px] font-extrabold leading-none select-none pointer-events-none"
+                style={{ color: step.numColor, opacity: 0.06 }}
                 aria-hidden="true"
               >
                 {step.number}
               </span>
 
-              {/* Badge */}
-              <div className="flex items-center gap-3">
-                <span
-                  className="text-xs font-black uppercase tracking-[0.18em]"
-                  style={{ color: step.accentText, opacity: 0.5 }}
-                >
-                  Step {step.number}
-                </span>
-                <div
-                  className="h-px flex-1"
-                  style={{ backgroundColor: step.accentText, opacity: 0.15 }}
-                />
-              </div>
+              {/* Phase badge */}
+              <span
+                className="text-[11px] font-body font-bold uppercase tracking-[0.2em]"
+                style={{ color: step.sub }}
+              >
+                Step {step.number}
+              </span>
 
-              {/* Title + headline */}
+              {/* Titles */}
               <div>
                 <h3
-                  className="text-3xl md:text-4xl font-black tracking-tight mb-2"
-                  style={{ color: step.accentText }}
+                  className="font-heading text-3xl font-bold tracking-tight mb-1.5"
+                  style={{ color: step.text }}
                 >
-                  {step.title}
+                  {step.phase}
                 </h3>
                 <p
-                  className="text-base font-bold leading-snug"
-                  style={{ color: step.accentText, opacity: 0.7 }}
+                  className="font-body text-sm font-semibold leading-snug"
+                  style={{ color: step.sub }}
                 >
                   {step.headline}
                 </p>
               </div>
 
-              {/* Description */}
+              {/* Body */}
               <p
-                className="text-sm leading-relaxed font-medium flex-grow"
-                style={{ color: step.accentText, opacity: 0.65 }}
+                className="font-body text-sm leading-relaxed flex-grow"
+                style={{ color: step.sub }}
               >
-                {step.description}
+                {step.body}
               </p>
 
               {/* Tags */}
-              <div className="flex flex-wrap gap-2 mt-auto">
+              <div className="flex flex-wrap gap-2 mt-auto pt-2">
                 {step.tags.map((tag) => (
                   <span
                     key={tag}
-                    className="text-xs font-bold px-3 py-1.5 rounded-full"
-                    style={{
-                      backgroundColor: `${step.accentText}18`,
-                      color: step.accentText,
-                    }}
+                    className="text-xs font-body font-semibold px-3 py-1.5 rounded-full"
+                    style={{ backgroundColor: step.tagBg, color: step.tagText }}
                   >
                     {tag}
                   </span>
@@ -157,15 +153,6 @@ export default function HowWeWork() {
           ))}
         </motion.div>
 
-        {/* Connector line — desktop only */}
-        <div className="hidden md:flex items-center justify-between mt-8 px-[calc(33%_/_2)] max-w-md mx-auto" aria-hidden="true">
-          {['Discovery', 'Build', 'Launch'].map((_, i, arr) => (
-            <React.Fragment key={i}>
-              <div className="w-2 h-2 rounded-full bg-[#1E3932]/20" />
-              {i < arr.length - 1 && <div className="flex-1 h-px bg-[#1E3932]/10 mx-1" />}
-            </React.Fragment>
-          ))}
-        </div>
       </div>
     </section>
   );

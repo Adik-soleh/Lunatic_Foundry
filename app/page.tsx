@@ -7,12 +7,10 @@ import MidCTA from '@/components/sections/MidCTA';
 import StatsCounter from '@/components/sections/StatsCounter';
 import Testimonials from '@/components/sections/Testimonials';
 
-const heroMediaMode: 'cards' | 'video' = 'video';
-
 export default function HomePage() {
   return (
     <>
-      <Hero mediaMode={heroMediaMode} videoSrc="/hero/hero-showreel.mp4" videoPoster="/hero/fallbackHero1.jpeg" />
+      <Hero />
       <div className="relative z-10 bg-white">
         <LogoWall />
         <BentoGrid />
