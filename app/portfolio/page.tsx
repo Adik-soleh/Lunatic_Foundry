@@ -10,8 +10,8 @@ import MidCTA from '@/components/sections/MidCTA';
 type Category = 'all' | 'web' | 'mobile' | 'design';
 
 const categories: { label: string; value: Category }[] = [
-  { label: 'All',    value: 'all'    },
-  { label: 'Web',    value: 'web'    },
+  { label: 'All', value: 'all' },
+  { label: 'Web', value: 'web' },
   { label: 'Mobile', value: 'mobile' },
   { label: 'Design', value: 'design' },
 ];
@@ -19,11 +19,11 @@ const categories: { label: string; value: Category }[] = [
 // Alternate palette per card row
 const cardPalette = [
   { bg: '#1E3932', text: '#FAFAF8', sub: 'rgba(250,250,248,0.58)', tag: 'rgba(198,226,59,0.15)', tagText: '#C6E23B', arrow: '#C6E23B' },
-  { bg: '#F8F9F4', text: '#080E0C', sub: '#6B7471',               tag: '#E4E8DD',               tagText: '#1E3932', arrow: '#1E3932' },
-  { bg: '#C6E23B', text: '#080E0C', sub: 'rgba(8,14,12,0.6)',     tag: 'rgba(30,57,50,0.1)',    tagText: '#1E3932', arrow: '#1E3932' },
-  { bg: '#080E0C', text: '#FAFAF8', sub: 'rgba(250,250,248,0.5)', tag: 'rgba(198,226,59,0.1)',  tagText: '#C6E23B', arrow: '#C6E23B' },
+  { bg: '#F8F9F4', text: '#080E0C', sub: '#6B7471', tag: '#E4E8DD', tagText: '#1E3932', arrow: '#1E3932' },
+  { bg: '#C6E23B', text: '#080E0C', sub: 'rgba(8,14,12,0.6)', tag: 'rgba(30,57,50,0.1)', tagText: '#1E3932', arrow: '#1E3932' },
+  { bg: '#080E0C', text: '#FAFAF8', sub: 'rgba(250,250,248,0.5)', tag: 'rgba(198,226,59,0.1)', tagText: '#C6E23B', arrow: '#C6E23B' },
   { bg: '#1E3932', text: '#FAFAF8', sub: 'rgba(250,250,248,0.58)', tag: 'rgba(198,226,59,0.15)', tagText: '#C6E23B', arrow: '#C6E23B' },
-  { bg: '#F8F9F4', text: '#080E0C', sub: '#6B7471',               tag: '#E4E8DD',               tagText: '#1E3932', arrow: '#1E3932' },
+  { bg: '#F8F9F4', text: '#080E0C', sub: '#6B7471', tag: '#E4E8DD', tagText: '#1E3932', arrow: '#1E3932' },
 ];
 
 export default function PortfolioPage() {
@@ -68,11 +68,10 @@ export default function PortfolioPage() {
             <button
               key={cat.value}
               onClick={() => setActive(cat.value)}
-              className={`px-5 py-2 rounded-full text-[13px] font-body font-semibold whitespace-nowrap transition-all duration-200 ${
-                active === cat.value
+              className={`px-5 py-2 rounded-full text-[13px] font-body font-semibold whitespace-nowrap transition-all duration-200 ${active === cat.value
                   ? 'bg-[#080E0C] text-white'
                   : 'bg-white border border-[#E4E8DD] text-[#6B7471] hover:border-[#1E3932]/30 hover:text-[#080E0C]'
-              }`}
+                }`}
             >
               {cat.label}
             </button>

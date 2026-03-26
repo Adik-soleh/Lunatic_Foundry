@@ -10,9 +10,9 @@ const iconMap: Record<string, React.ElementType> = { Palette, Smartphone, Globe,
 
 const palette = [
   { bg: '#1E3932', border: 'transparent', icon: '#C6E23B', iconBg: 'rgba(198,226,59,0.15)', text: '#FAFAF8', sub: 'rgba(250,250,248,0.58)', tag: 'rgba(198,226,59,0.15)', tagText: '#C6E23B' },
-  { bg: '#F8F9F4', border: '#D8DDD5',     icon: '#1E3932', iconBg: '#E4E8DD',               text: '#080E0C', sub: '#6B7471',               tag: '#E4E8DD',               tagText: '#1E3932' },
-  { bg: '#C6E23B', border: 'transparent', icon: '#1E3932', iconBg: 'rgba(30,57,50,0.12)',   text: '#080E0C', sub: 'rgba(8,14,12,0.6)',     tag: 'rgba(30,57,50,0.1)',    tagText: '#1E3932' },
-  { bg: '#080E0C', border: 'transparent', icon: '#C6E23B', iconBg: 'rgba(198,226,59,0.1)',  text: '#FAFAF8', sub: 'rgba(250,250,248,0.5)', tag: 'rgba(198,226,59,0.1)',  tagText: '#C6E23B' },
+  { bg: '#F8F9F4', border: '#D8DDD5', icon: '#1E3932', iconBg: '#E4E8DD', text: '#080E0C', sub: '#6B7471', tag: '#E4E8DD', tagText: '#1E3932' },
+  { bg: '#C6E23B', border: 'transparent', icon: '#1E3932', iconBg: 'rgba(30,57,50,0.12)', text: '#080E0C', sub: 'rgba(8,14,12,0.6)', tag: 'rgba(30,57,50,0.1)', tagText: '#1E3932' },
+  { bg: '#080E0C', border: 'transparent', icon: '#C6E23B', iconBg: 'rgba(198,226,59,0.1)', text: '#FAFAF8', sub: 'rgba(250,250,248,0.5)', tag: 'rgba(198,226,59,0.1)', tagText: '#C6E23B' },
 ];
 
 const cardVariants = {
